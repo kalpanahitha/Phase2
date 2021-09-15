@@ -1,0 +1,23 @@
+<h2>List of food</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th> <th>IName</th><th>Price</th> <th>select</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let i of item'>
+            <td>{{i.id}}</td> <td>{{i.iname}}</td><td>{{i.price}}</td>
+        
+        <a href="#" (click)='getitembyID(i.id)'>select</a>
+    </tr>
+    </tbody>
+</table>
+{{msg}}<br/>
+ID:<input type ="number"[(ngModel)]='z.id'/><br/>
+item Name:<input type ="text"[(ngModel)]='z.iname'/><br/>
+price:<input type="number"[(ngModel)]='z.price'/><br/>
+<button (click)='z={msg}'>order</button>
+<nav>
+    <a routerLink="/payment" routerLinkAction="active">payment</a><br/>
+  </nav>

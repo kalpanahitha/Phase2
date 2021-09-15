@@ -1,0 +1,19 @@
+<h2>user login</h2>
+<table border="1">
+    <tr>
+        <td>User ID</td>
+        <td><input type="text" [(ngModel)]='UID'></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="password" [(ngModel)]='pwd'></td>
+    </tr>
+    <tr>
+        <td><input type="button" (click)='validateUser()'value='login'></td>
+    <td>{{msg}}</td>
+</tr>
+</table>
+<nav>
+  <a routerLink="/user" routerLinkAction="active">login</a><br/>
+</nav>
+

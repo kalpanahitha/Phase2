@@ -1,0 +1,28 @@
+<h1>Welcome!</h1>
+<h1>admin page</h1>  
+<h2>List of Food Items</h2>
+<table class="table table-hover table-bordered">
+<thead>
+    <tr>
+        <th>ID</th><th>IName</th><th>Price</th><th>Operations</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor='let i of item'> 
+        <td>{{i.id}}</td><td>{{i.iname}}</td><td>{{i.price}}</td>
+
+      <td>
+         <a href="#" (click)='getitembyID(i.id)'>select</a>|
+         <a href="#" (click)='deleteitembyID(i.id)'>delete</a>|
+         <a href="#" (click)='additem()'>add</a>|
+         <a href="#" (click)='edititembyID(i.id)'>edit</a>
+        </td>
+    
+    </tr>
+        
+</tbody>
+</table> {{msg}}<hr/>
+ID:<input type ="number"[(ngModel)]='z.id'/><br/>
+item Name:<input type ="text"[(ngModel)]='z.iname'/><br/>
+Price:<input type="number"[(ngModel)]='z.price'/><br/>
+<button (click)='z={}'>Clear All</button>
